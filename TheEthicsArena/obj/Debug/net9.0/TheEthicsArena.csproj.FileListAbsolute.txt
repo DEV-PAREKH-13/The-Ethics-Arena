@@ -1,0 +1,7 @@
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/obj/Debug/net9.0/TheEthicsArena.GeneratedMSBuildEditorConfig.editorconfig
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/obj/Debug/net9.0/TheEthicsArena.AssemblyInfoInputs.cache
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/obj/Debug/net9.0/TheEthicsArena.AssemblyInfo.cs
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/obj/Debug/net9.0/TheEthicsArena.csproj.CoreCompileInputs.cache
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/obj/Debug/net9.0/TheEthicsArena.MvcApplicationPartsAssemblyInfo.cache
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/obj/Debug/net9.0/TheEthicsArena.RazorAssemblyInfo.cache
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/obj/Debug/net9.0/TheEthicsArena.RazorAssemblyInfo.cs
