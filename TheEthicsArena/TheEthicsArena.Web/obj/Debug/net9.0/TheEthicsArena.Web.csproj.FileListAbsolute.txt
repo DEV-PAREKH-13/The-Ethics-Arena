@@ -95,3 +95,4 @@
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/TheEthicsArena.Web.pdb
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/TheEthicsArena.Web.genruntimeconfig.cache
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/ref/TheEthicsArena.Web.dll
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/TheEthicsArena.Web.sourcelink.json

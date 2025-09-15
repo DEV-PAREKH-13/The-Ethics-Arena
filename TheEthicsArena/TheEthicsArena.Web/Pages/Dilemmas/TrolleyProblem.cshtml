@@ -1,0 +1,44 @@
+﻿@page "/dilemma/trolley-problem"
+@model TheEthicsArena.Web.Pages.Dilemmas.TrolleyProblemModel
+@{
+    ViewData["Title"] = "The Trolley Problem";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="text-center text-danger mb-4">The Trolley Problem</h1>
+            
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <p class="lead">
+                        A runaway trolley is heading toward five people tied to the tracks. 
+                        You can pull a lever to divert the trolley to a side track, but there's 
+                        one person tied to that track who will be killed instead.
+                    </p>
+                    
+                    <div class="text-center my-4">
+                        <h4>What do you do?</h4>
+                    </div>
+                    
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button type="submit" name="choice" value="pull" class="btn btn-danger btn-lg w-100 mb-3">
+                                    Pull the Lever
+                                    <small class="d-block">Save 5, sacrifice 1</small>
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" name="choice" value="nothing" class="btn btn-warning btn-lg w-100 mb-3">
+                                    Do Nothing
+                                    <small class="d-block">Let fate decide</small>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
