@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSession();
 builder.Services.AddSingleton<DilemmaService>();
+builder.Services.AddSingleton<MongoDbService>();
+
 
 var app = builder.Build();
 

@@ -4,8 +4,10 @@ namespace TheEthicsArena.Web.Services
 {
     public class DilemmaService
     {
+        private readonly MongoDbService _mongoDb;
         private static readonly List<EthicalDilemma> _dilemmas = new()
         {
+            // Keep all your existing dilemma data here - same as before
             new EthicalDilemma
             {
                 Id = 1,
@@ -128,6 +130,11 @@ namespace TheEthicsArena.Web.Services
             }
         };
 
+        public DilemmaService(MongoDbService mongoDb)
+        {
+            _mongoDb = mongoDb;
+        }
+
         public List<EthicalDilemma> GetAllDilemmas()
         {
             return _dilemmas;
@@ -138,20 +145,26 @@ namespace TheEthicsArena.Web.Services
             return _dilemmas.FirstOrDefault(d => d.Id == id);
         }
 
-        public void RecordResponse(string userId, int dilemmaId, string choice, int timeToDecide)
+        public async Task RecordResponseAsync(string userId, int dilemmaId, string choice, int timeToDecide)
         {
-            var dilemma = GetDilemmaById(dilemmaId);
-            if (dilemma != null)
+            await _mongoDb.SaveResponseAsync(new DilemmaResponseMongo
             {
-                if (choice == "A")
-                    dilemma.ResponsesA++;
-                else if (choice == "B")
-                    dilemma.ResponsesB++;
-            }
+                UserId = userId,
+                DilemmaId = dilemmaId,
+                Choice = choice,
+                Timestamp = DateTime.UtcNow,
+                TimeToDecide = timeToDecide
+            });
+        }
+
+        public async Task<Dictionary<string, int>> GetResponseStatsAsync(int dilemmaId)
+        {
+            return await _mongoDb.GetResponseStatsAsync(dilemmaId);
         }
 
         public DilemmaNavigation? GetNavigationForDilemma(int dilemmaId)
         {
+            // Keep all your existing navigation logic - same as before
             var navigation = new Dictionary<int, DilemmaNavigation>
             {
                 { 1, new DilemmaNavigation { DilemmaId = 1, NextId = 2, NextTitle = "The Crying Baby", NextUrl = "/dilemma/crying-baby", PreviousId = null } },
@@ -165,7 +178,6 @@ namespace TheEthicsArena.Web.Services
                 { 9, new DilemmaNavigation { DilemmaId = 9, NextId = 10, NextTitle = "The Prayer Experiment", NextUrl = "/dilemma/prayer-experiment", PreviousId = 8, PreviousTitle = "The Child Soldier", PreviousUrl = "/dilemma/child-soldier" } },
                 { 10, new DilemmaNavigation { DilemmaId = 10, NextId = null, PreviousId = 9, PreviousTitle = "The False Witness", PreviousUrl = "/dilemma/false-witness" } }
             };
-
             return navigation.GetValueOrDefault(dilemmaId);
         }
     }

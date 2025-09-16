@@ -22,7 +22,7 @@ namespace TheEthicsArena.Web.Pages.Dilemmas
             Navigation = _dilemmaService.GetNavigationForDilemma(4);
         }
         
-        public IActionResult OnPost(string choice)
+        public async Task<IActionResult> OnPostAsync(string choice)
         {
             Dilemma = _dilemmaService.GetDilemmaById(4);
             Navigation = _dilemmaService.GetNavigationForDilemma(4);
@@ -32,10 +32,13 @@ namespace TheEthicsArena.Web.Pages.Dilemmas
             string userId = HttpContext.Session.GetString("UserID") ?? Guid.NewGuid().ToString();
             HttpContext.Session.SetString("UserID", userId);
             
-            _dilemmaService.RecordResponse(userId, 4, choice, 0);
+            // Save to MongoDB
+            await _dilemmaService.RecordResponseAsync(userId, 4, choice, 0);
             
-            int total = Dilemma.ResponsesA + Dilemma.ResponsesB;
-            int percentA = total > 0 ? (int)Math.Round((double)Dilemma.ResponsesA / total * 100) : 50;
+            // Get stats from MongoDB
+            var stats = await _dilemmaService.GetResponseStatsAsync(4);
+            int total = stats["A"] + stats["B"];
+            int percentA = total > 0 ? (int)Math.Round((double)stats["A"] / total * 100) : 50;
             int percentB = 100 - percentA;
             
             ViewData["Result"] = true;

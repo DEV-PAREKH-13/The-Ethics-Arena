@@ -96,3 +96,11 @@
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/TheEthicsArena.Web.genruntimeconfig.cache
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/ref/TheEthicsArena.Web.dll
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/TheEthicsArena.Web.sourcelink.json
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/TheEthicsArena.Web.csproj.AssemblyReference.cache
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/bin/Debug/net9.0/DnsClient.dll
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/bin/Debug/net9.0/MongoDB.Bson.dll
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/bin/Debug/net9.0/MongoDB.Driver.dll
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/bin/Debug/net9.0/SharpCompress.dll
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/bin/Debug/net9.0/Snappier.dll
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/bin/Debug/net9.0/ZstdSharp.dll
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/TheEthic.B927A088.Up2Date
