@@ -5,38 +5,35 @@ using TheEthicsArena.Web.Services;
 
 namespace TheEthicsArena.Web.Pages.Dilemmas
 {
-    public class TrolleyProblemModel : PageModel
+    public class CheatingSpouseModel : PageModel
     {
         private readonly DilemmaService _dilemmaService;
         public EthicalDilemma? Dilemma { get; set; }
         public DilemmaNavigation? Navigation { get; set; }
 
-        public TrolleyProblemModel(DilemmaService dilemmaService)
+        public CheatingSpouseModel(DilemmaService dilemmaService)
         {
             _dilemmaService = dilemmaService;
         }
 
         public void OnGet()
         {
-            Dilemma = _dilemmaService.GetDilemmaById(1);
-            Navigation = _dilemmaService.GetNavigationForDilemma(1);
+            Dilemma = _dilemmaService.GetDilemmaById(4);
+            Navigation = _dilemmaService.GetNavigationForDilemma(4);
         }
         
         public IActionResult OnPost(string choice)
         {
-            Dilemma = _dilemmaService.GetDilemmaById(1);
-            Navigation = _dilemmaService.GetNavigationForDilemma(1);
+            Dilemma = _dilemmaService.GetDilemmaById(4);
+            Navigation = _dilemmaService.GetNavigationForDilemma(4);
             
             if (Dilemma == null) return Page();
 
-            // Generate or get user ID
             string userId = HttpContext.Session.GetString("UserID") ?? Guid.NewGuid().ToString();
             HttpContext.Session.SetString("UserID", userId);
             
-            // Record the response
-            _dilemmaService.RecordResponse(userId, 1, choice, 0);
+            _dilemmaService.RecordResponse(userId, 4, choice, 0);
             
-            // Calculate percentages
             int total = Dilemma.ResponsesA + Dilemma.ResponsesB;
             int percentA = total > 0 ? (int)Math.Round((double)Dilemma.ResponsesA / total * 100) : 50;
             int percentB = 100 - percentA;

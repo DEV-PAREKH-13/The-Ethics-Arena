@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheEthicsArena.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78ce12211d295be71e4ff26728bddefbce990446")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+373bd91d6860076f42a84383fb891151f2b61ee0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheEthicsArena.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheEthicsArena.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

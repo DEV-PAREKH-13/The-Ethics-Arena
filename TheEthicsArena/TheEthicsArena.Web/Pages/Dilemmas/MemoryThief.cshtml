@@ -1,7 +1,7 @@
-﻿@page "/dilemma/trolley-problem"
-@model TheEthicsArena.Web.Pages.Dilemmas.TrolleyProblemModel
+﻿@page "/dilemma/memory-thief"
+@model TheEthicsArena.Web.Pages.Dilemmas.MemoryThiefModel
 @{
-    ViewData["Title"] = "The Trolley Problem";
+    ViewData["Title"] = "The Memory Thief";
 }
 
 <div class="container mt-4">
@@ -20,7 +20,7 @@
 
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <h1 class="text-center text-danger mb-4">🚂 The Trolley Problem</h1>
+            <h1 class="text-center text-danger mb-4">🧠 The Memory Thief</h1>
             
             <div class="card shadow-lg border-0">
                 <div class="card-body p-4">
@@ -34,7 +34,6 @@
                     </div>
                     
                     <form method="post" id="dilemmaForm">
-                        <input type="hidden" id="timeStarted" value="@DateTime.UtcNow.Ticks" />
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <button type="submit" name="choice" value="A" class="btn btn-outline-danger btn-lg w-100 p-4 choice-btn">
@@ -54,50 +53,55 @@
             </div>
 
             @if (ViewData["Result"] != null)
-{
-    <div class="mt-4">
-        <div class="alert alert-secondary border-0 shadow-sm" role="alert">
-            <h5 class="mb-3">Your Choice: @ViewData["ChoiceText"]</h5>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="stats-box">
-                        <div class="stats-number">@ViewData["PercentageA"]%</div>
-                        <div class="stats-label">chose @Model.Dilemma?.OptionA</div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="stats-box">
-                        <div class="stats-number">@ViewData["PercentageB"]%</div>
-                        <div class="stats-label">chose @Model.Dilemma?.OptionB</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-4">
-                <h6>Philosophical Perspective:</h6>
-                <p class="small">@Model.Dilemma?.PhilosophicalContext</p>
-            </div>
-            
-            <div class="mt-3 d-flex justify-content-between">
+            {
+                <div class="mt-4">
+                    <div class="alert alert-secondary border-0 shadow-sm" role="alert">
+                        <h5 class="mb-3">Your Choice: @ViewData["ChoiceText"]</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="stats-box">
+                                    <div class="stats-number">@ViewData["PercentageA"]%</div>
+                                    <div class="stats-label">chose @Model.Dilemma?.OptionA</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="stats-box">
+                                    <div class="stats-number">@ViewData["PercentageB"]%</div>
+                                    <div class="stats-label">chose @Model.Dilemma?.OptionB</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6>Philosophical Perspective:</h6>
+                            <p class="small">@Model.Dilemma?.PhilosophicalContext</p>
+                        </div>
+                        
+                        <div class="mt-3 d-flex justify-content-between">
     <div>
+        @if (Model.Navigation?.PreviousId != null)
+        {
+            <a href="@Model.Navigation.PreviousUrl" class="btn btn-outline-danger">
+                ← @Model.Navigation.PreviousTitle
+            </a>
+        }
         <a href="/" class="btn btn-outline-secondary">🏠 Home</a>
-        <a href="/dilemma/trolley-problem" class="btn btn-outline-secondary">🔄 Try Again</a>
     </div>
     <div>
+        <a href="/dilemma/memory-thief" class="btn btn-outline-secondary">🔄 Try Again</a>
         @if (Model.Navigation?.NextId != null)
         {
             <a href="@Model.Navigation.NextUrl" class="btn btn-danger">
                 Next: @Model.Navigation.NextTitle →
             </a>
         }
-        <span class="badge bg-success ms-2">1 of 10 Complete</span>
+        <span class="badge bg-success ms-2">6 of 10 Complete</span>
     </div>
 </div>
 
-        </div>
-    </div>
-}
-
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </div>

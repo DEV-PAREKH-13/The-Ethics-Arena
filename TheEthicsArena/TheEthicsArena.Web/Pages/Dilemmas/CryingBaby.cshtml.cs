@@ -5,27 +5,27 @@ using TheEthicsArena.Web.Services;
 
 namespace TheEthicsArena.Web.Pages.Dilemmas
 {
-    public class TrolleyProblemModel : PageModel
+    public class CryingBabyModel : PageModel
     {
         private readonly DilemmaService _dilemmaService;
         public EthicalDilemma? Dilemma { get; set; }
         public DilemmaNavigation? Navigation { get; set; }
 
-        public TrolleyProblemModel(DilemmaService dilemmaService)
+        public CryingBabyModel(DilemmaService dilemmaService)
         {
             _dilemmaService = dilemmaService;
         }
 
         public void OnGet()
         {
-            Dilemma = _dilemmaService.GetDilemmaById(1);
-            Navigation = _dilemmaService.GetNavigationForDilemma(1);
+            Dilemma = _dilemmaService.GetDilemmaById(2);
+            Navigation = _dilemmaService.GetNavigationForDilemma(2);
         }
         
         public IActionResult OnPost(string choice)
         {
-            Dilemma = _dilemmaService.GetDilemmaById(1);
-            Navigation = _dilemmaService.GetNavigationForDilemma(1);
+            Dilemma = _dilemmaService.GetDilemmaById(2);
+            Navigation = _dilemmaService.GetNavigationForDilemma(2);
             
             if (Dilemma == null) return Page();
 
@@ -34,7 +34,7 @@ namespace TheEthicsArena.Web.Pages.Dilemmas
             HttpContext.Session.SetString("UserID", userId);
             
             // Record the response
-            _dilemmaService.RecordResponse(userId, 1, choice, 0);
+            _dilemmaService.RecordResponse(userId, 2, choice, 0);
             
             // Calculate percentages
             int total = Dilemma.ResponsesA + Dilemma.ResponsesB;

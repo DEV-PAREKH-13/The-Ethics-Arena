@@ -1,7 +1,7 @@
-﻿@page "/dilemma/trolley-problem"
-@model TheEthicsArena.Web.Pages.Dilemmas.TrolleyProblemModel
+﻿@page "/dilemma/crying-baby"
+@model TheEthicsArena.Web.Pages.Dilemmas.CryingBabyModel
 @{
-    ViewData["Title"] = "The Trolley Problem";
+    ViewData["Title"] = "The Crying Baby";
 }
 
 <div class="container mt-4">
@@ -20,7 +20,7 @@
 
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <h1 class="text-center text-danger mb-4">🚂 The Trolley Problem</h1>
+            <h1 class="text-center text-danger mb-4">💔 The Crying Baby</h1>
             
             <div class="card shadow-lg border-0">
                 <div class="card-body p-4">
@@ -80,20 +80,25 @@
             
             <div class="mt-3 d-flex justify-content-between">
     <div>
+        @if (Model.Navigation?.PreviousId != null)
+        {
+            <a href="@Model.Navigation.PreviousUrl" class="btn btn-outline-danger">
+                ← @Model.Navigation.PreviousTitle
+            </a>
+        }
         <a href="/" class="btn btn-outline-secondary">🏠 Home</a>
-        <a href="/dilemma/trolley-problem" class="btn btn-outline-secondary">🔄 Try Again</a>
     </div>
     <div>
+        <a href="/dilemma/crying-baby" class="btn btn-outline-secondary">🔄 Try Again</a>
         @if (Model.Navigation?.NextId != null)
         {
             <a href="@Model.Navigation.NextUrl" class="btn btn-danger">
                 Next: @Model.Navigation.NextTitle →
             </a>
         }
-        <span class="badge bg-success ms-2">1 of 10 Complete</span>
+        <span class="badge bg-success ms-2">2 of 10 Complete</span>
     </div>
 </div>
-
         </div>
     </div>
 }
