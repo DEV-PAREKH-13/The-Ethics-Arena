@@ -4,19 +4,21 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace TheEthicsArena.Web.Models
 {
     public class DilemmaResponseMongo
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
-        
-        public string UserId { get; set; } = string.Empty;
-        public int DilemmaId { get; set; }
-        public string Choice { get; set; } = string.Empty; // "A" or "B"
-        public DateTime Timestamp { get; set; }
-        public int TimeToDecide { get; set; } // seconds
-        public string? UserAgent { get; set; }
-        public string? IpAddress { get; set; }
-    }
+{
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? Id { get; set; }
+
+    public string UserId { get; set; } = string.Empty;
+    public int DilemmaId { get; set; }
+    public string Choice { get; set; } = string.Empty; // "A" or "B"
+    public DateTime Timestamp { get; set; }
+    public int TimeToDecide { get; set; }
+    public string? UserAgent { get; set; }
+    public string? IpAddress { get; set; }
+    public string UserName { get; set; } = string.Empty; // <-- ADD THIS LINE
+}
+
 
     public class EthicalDilemmaMongo
     {

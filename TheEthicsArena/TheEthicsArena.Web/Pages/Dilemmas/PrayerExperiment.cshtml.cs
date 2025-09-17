@@ -33,8 +33,8 @@ namespace TheEthicsArena.Web.Pages.Dilemmas
             HttpContext.Session.SetString("UserID", userId);
             
             // Save to MongoDB
-            await _dilemmaService.RecordResponseAsync(userId, 10, choice, 0);
-            
+string userName = HttpContext.Session.GetString("UserName") ?? "Anonymous";
+await _dilemmaService.RecordResponseAsync(userId, 10, choice, 0, userName);            
             // Get stats from MongoDB
             var stats = await _dilemmaService.GetResponseStatsAsync(10);
             int total = stats["A"] + stats["B"];

@@ -1,0 +1,156 @@
+@page "/admin/dashboard"
+@inject IHttpClientFactory HttpClientFactory
+
+<h1 class="mb-4">Admin Dashboard - Dilemma Response Stats</h1>
+
+<div class="chart-container" style="position: relative; height:40vh; width:80vw;">
+    <canvas id="responseChart"></canvas>
+</div>
+
+<div class="chart-container" style="position: relative; height:40vh; width:80vw; margin-top: 40px;">
+    <canvas id="lineChart"></canvas>
+</div>
+
+<div class="chart-container" style="position: relative; height:40vh; width:40vw; margin-top: 40px;">
+    <canvas id="pieChart"></canvas>
+</div>
+
+@section Scripts {
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+window.onload = async () => {
+    // Fetch data for Bar Chart from API
+    const response = await fetch('/api/admin/stats');
+    const dataFromApi = await response.json();
+
+    // Prepare data for Bar Chart
+    const labels = dataFromApi.map(d => d.title);
+    const dataA = dataFromApi.map(d => d.responsesA);
+    const dataB = dataFromApi.map(d => d.responsesB);
+
+    // Bar Chart: User Responses per Dilemma
+    const ctxBar = document.getElementById('responseChart').getContext('2d');
+    new Chart(ctxBar, {
+        type: 'bar',
+        data: { // FIX: Added 'data' property
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Option A',
+                    data: dataA, // FIX: Added 'data' property
+                    backgroundColor: 'rgba(220, 53, 69, 0.7)' // red
+                },
+                {
+                    label: 'Option B',
+                    data: dataB, // FIX: Added 'data' property
+                    backgroundColor: 'rgba(255, 193, 7, 0.7)' // yellow
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: { display: true, text: 'Number of Responses' }
+                },
+                x: {
+                    title: { display: true, text: 'Dilemmas' }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'User Responses per Dilemma',
+                    font: { size: 18 }
+                },
+                tooltip: { mode: 'index', intersect: false }
+            }
+        }
+    });
+
+    // Line Chart: Example trends (replace with real data)
+    const ctxLine = document.getElementById('lineChart').getContext('2d');
+    new Chart(ctxLine, {
+        type: 'line',
+        data: { // FIX: Added 'data' property
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [
+                {
+                    label: 'Option A Responses',
+                    data: [12, 19, 14, 15, 16, 20], // FIX: Added 'data' property
+                    borderColor: 'rgba(220, 53, 69, 1)',
+                    backgroundColor: 'rgba(220, 53, 69, 0.2)',
+                    fill: true,
+                    tension: 0.3
+                },
+                {
+                    label: 'Option B Responses',
+                    data: [10, 17, 10, 12, 14, 15], // FIX: Added 'data' property
+                    borderColor: 'rgba(255, 193, 7, 1)',
+                    backgroundColor: 'rgba(255, 193, 7, 0.2)',
+                    fill: true,
+                    tension: 0.3
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Response Trends Over 6 Months',
+                    font: { size: 18 }
+                },
+                tooltip: { mode: 'nearest', intersect: false }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: { display: true, text: 'Number of Responses' }
+                },
+                x: {
+                    title: { display: true, text: 'Month' }
+                }
+            }
+        }
+    });
+
+    // Pie Chart: Example overall response distribution
+    const ctxPie = document.getElementById('pieChart').getContext('2d');
+    new Chart(ctxPie, {
+        type: 'pie',
+        data: { // FIX: Added 'data' property
+            labels: ['Option A', 'Option B', 'Option C'],
+            datasets: [{
+                data: [120, 90, 70], // FIX: Added 'data' property
+                backgroundColor: [
+                    'rgba(220, 53, 69, 0.7)',
+                    'rgba(255, 193, 7, 0.7)',
+                    'rgba(23, 162, 184, 0.7)'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Overall Response Distribution',
+                    font: { size: 18 }
+                },
+                legend: { position: 'top' },
+                tooltip: {
+                    callbacks: {
+                        label: context => `${context.label}: ${context.parsed} responses`
+                    }
+                }
+            }
+        }
+    });
+};
+</script>
+}

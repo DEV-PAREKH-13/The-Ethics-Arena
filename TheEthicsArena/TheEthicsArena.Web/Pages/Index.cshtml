@@ -3,11 +3,22 @@
 @{
     ViewData["Title"] = "Welcome to The Ethics Arena";
 }
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Identity
+@inject IHttpContextAccessor HttpContextAccessor
 
 <div class="text-center">
     <h1 class="display-4 text-danger mb-4">⚖️ The Ethics Arena</h1>
     <p class="lead mb-4">Where moral warriors battle through impossible choices</p>
 </div>
+<!-- <div class="mt-4 text-center">
+    @if (Model.IsAdmin)
+    {
+        <a href="/Account/Login" class="btn btn-warning btn-lg">
+            ⚙️ Admin Dashboard
+        </a>
+    }
+</div> -->
 
 <div class="row">
     <div class="col-md-8 mx-auto">
@@ -25,9 +36,11 @@
                     <strong>Some choices will haunt you forever.</strong>
                 </p>
                 <div class="text-center mt-4">
-                    <a href="/dilemma/trolley-problem" class="btn btn-danger btn-lg">
-                        🚂 Start with The Trolley Problem
-                    </a>
+                    <form method="post" asp-page-handler="Start">
+                        <label for="UserName" class="form-label">Enter your name or nickname to begin:</label>
+                         <input type="text" id="UserName" name="UserName" class="form-control w-50 mx-auto mb-3" placeholder="Your name" required />
+                        <button type="submit" class="btn btn-danger btn-lg">🚂 Start with The Trolley Problem</button>
+                    </form>
                 </div>
             </div>
         </div>

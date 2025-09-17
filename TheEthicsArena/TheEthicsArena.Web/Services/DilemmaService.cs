@@ -145,17 +145,19 @@ namespace TheEthicsArena.Web.Services
             return _dilemmas.FirstOrDefault(d => d.Id == id);
         }
 
-        public async Task RecordResponseAsync(string userId, int dilemmaId, string choice, int timeToDecide)
-        {
-            await _mongoDb.SaveResponseAsync(new DilemmaResponseMongo
-            {
-                UserId = userId,
-                DilemmaId = dilemmaId,
-                Choice = choice,
-                Timestamp = DateTime.UtcNow,
-                TimeToDecide = timeToDecide
-            });
-        }
+        public async Task RecordResponseAsync(string userId, int dilemmaId, string choice, int timeToDecide, string userName)
+{
+    await _mongoDb.SaveResponseAsync(new DilemmaResponseMongo
+    {
+        UserId = userId,
+        DilemmaId = dilemmaId,
+        Choice = choice,
+        Timestamp = DateTime.UtcNow,
+        TimeToDecide = timeToDecide,
+        UserName = userName // <-- Pass the user name here
+    });
+}
+
 
         public async Task<Dictionary<string, int>> GetResponseStatsAsync(int dilemmaId)
         {

@@ -1,19 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TheEthicsArena.Web.Pages;
-
-public class IndexModel : PageModel
+namespace TheEthicsArena.Web.Pages
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
+    public class IndexModel : PageModel
     {
-        _logger = logger;
-    }
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public void OnGet()
-    {
+        public bool IsAdmin { get; private set; }
+
+        public IndexModel(IHttpContextAccessor httpContextAccessor)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
+
+        public void OnGet()
+        {
+            var user = _httpContextAccessor.HttpContext?.User;
+            IsAdmin = user?.IsInRole("Admin") ?? false;
+        }
+        public IActionResult OnPostStart(string userName)
+{
+    HttpContext.Session.SetString("UserName", userName);
+    return RedirectToPage("/Dilemmas/TrolleyProblem");
+}
 
     }
 }
