@@ -1,31 +1,87 @@
-html {
-  font-size: 14px;
-}
+/* Modern Intellectual Theme */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Source+Serif+Pro:wght@700&display=swap');
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+    --paper-white: #FFFFFF;
+    --deep-gray: #2d3748;   /* Dark gray for text */
+    --slate-blue: #4A5568;  /* Muted, professional blue for accents */
+    --slate-hover: #2D3748; /* Darker blue/gray for hover */
+    --light-gray: #E2E8F0;  /* For borders and backgrounds */
+    --background: #F7FAFC; /* Almost white page background */
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: var(--background);
+    color: var(--deep-gray);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* --- Typography --- */
+h1, h2, h3 {
+    font-family: 'Source Serif Pro', serif;
+    color: var(--deep-gray);
+    font-weight: 700;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+a {
+    color: var(--slate-blue);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--slate-hover);
+    text-decoration: underline;
+}
+
+/* --- Layout & Components --- */
+.navbar, footer {
+    background-color: var(--paper-white);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.welcome-card {
+    background-color: var(--paper-white);
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-start {
+    background-color: var(--slate-blue);
+    color: var(--paper-white);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-start:hover {
+    background-color: var(--slate-hover);
+}
+
+.name-input {
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-start {
+    background-color: #5D4037; /* The same deep brown as the heading */
+    border-color: #5D4037;
+    color: #FFFFFF;
+}
+
+.btn-start:hover {
+    background-color: #FFFFFF; /* A slightly darker brown for the hover effect */
+    border-color: #FFFFFF;
 }

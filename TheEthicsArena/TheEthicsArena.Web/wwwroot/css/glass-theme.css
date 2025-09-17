@@ -1,0 +1,96 @@
+/* Glassmorphism Theme - Light Earth Tones with Solid Frame (Lowered) */
+
+
+body {
+    /* Fallback color while the image loads */
+    background-color: #C4A484; 
+    
+    /* A high-quality, subtle marble texture from Unsplash */
+    background-image: url('https://i.pinimg.com/736x/95/70/52/9570521f7583e69c990b5189727fc2b9.jpg');
+    
+    /* These properties ensure the image covers the whole page nicely */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This makes the background stay in place when the page scrolls */
+
+    color: #3d3535;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 6rem 3rem; 
+    box-sizing: border-box;
+    margin: 0; /* It's good practice to reset the default body margin */
+}
+
+/* --- 2. The Outer Frame --- */
+.outer-glow-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px; /* Added max-width for large screens */
+    height: 100%;
+    padding: 3px;
+    background-color: #EAE0D5;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 3. The Glass Frame --- */
+.glass-frame {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* --- 4. Content Styling --- */
+.glass-frame header,
+.glass-frame main,
+.glass-frame footer {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.glass-frame footer {
+    border-top: none !important;
+}
+
+.glass-frame h1, .glass-frame h2 {
+    color: #3d3535;
+}
+
+/* ... other styles remain the same ... */
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #3d3535 !important;
+}
+
+.dropdown-menu {
+    background-color: rgba(245, 240, 232, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-item {
+    color: #3d3535 !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(61, 53, 53, 0.1);
+}
+
+.welcome-card {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}

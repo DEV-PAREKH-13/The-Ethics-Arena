@@ -1,16 +1,28 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/TheEthicsArena.Web/css/glass-theme.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\glass-theme.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-eU/c69jcsTSM41GnHV\u002BJMAAxMeG8Xl5qwA1P0Cf2J48="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2393"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eU/c69jcsTSM41GnHV\u002BJMAAxMeG8Xl5qwA1P0Cf2J48=\u0022"},{"Name":"Last-Modified","Value":"Wed, 17 Sep 2025 20:28:15 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/TheEthicsArena.Web/css/glass-theme.ng3souueyn.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\glass-theme.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ng3souueyn"},{"Name":"integrity","Value":"sha256-eU/c69jcsTSM41GnHV\u002BJMAAxMeG8Xl5qwA1P0Cf2J48="},{"Name":"label","Value":"_content/TheEthicsArena.Web/css/glass-theme.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2393"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eU/c69jcsTSM41GnHV\u002BJMAAxMeG8Xl5qwA1P0Cf2J48=\u0022"},{"Name":"Last-Modified","Value":"Wed, 17 Sep 2025 20:28:15 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/TheEthicsArena.Web/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD\u002Bcbo="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"637"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD\u002Bcbo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 15 Sep 2025 14:17:59 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PcgMUXwSDs5XZc9sF4c5BGbh0caPjzciIwtJUuudq9w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2115"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022PcgMUXwSDs5XZc9sF4c5BGbh0caPjzciIwtJUuudq9w=\u0022"},{"Name":"Last-Modified","Value":"Wed, 17 Sep 2025 20:18:03 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/TheEthicsArena.Web/css/site.lugek5hnai.css">
+    <StaticWebAssetEndpoint Include="_content/TheEthicsArena.Web/css/site.hzglf4kd4y.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lugek5hnai"},{"Name":"integrity","Value":"sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD\u002Bcbo="},{"Name":"label","Value":"_content/TheEthicsArena.Web/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"637"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD\u002Bcbo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 15 Sep 2025 14:17:59 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"hzglf4kd4y"},{"Name":"integrity","Value":"sha256-PcgMUXwSDs5XZc9sF4c5BGbh0caPjzciIwtJUuudq9w="},{"Name":"label","Value":"_content/TheEthicsArena.Web/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2115"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022PcgMUXwSDs5XZc9sF4c5BGbh0caPjzciIwtJUuudq9w=\u0022"},{"Name":"Last-Modified","Value":"Wed, 17 Sep 2025 20:18:03 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/TheEthicsArena.Web/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>

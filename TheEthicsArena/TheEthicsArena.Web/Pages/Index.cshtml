@@ -6,9 +6,10 @@
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Identity
 @inject IHttpContextAccessor HttpContextAccessor
+<link href="css/site.css" rel="stylesheet" />
 
 <div class="text-center">
-    <h1 class="display-4 text-danger mb-4">⚖️ The Ethics Arena</h1>
+    <h1 class="display-4 mb-4">⚖️ The Ethics Arena</h1>
     <p class="lead mb-4">Where moral warriors battle through impossible choices</p>
 </div>
 <!-- <div class="mt-4 text-center">
@@ -39,7 +40,7 @@
                     <form method="post" asp-page-handler="Start">
                         <label for="UserName" class="form-label">Enter your name or nickname to begin:</label>
                          <input type="text" id="UserName" name="UserName" class="form-control w-50 mx-auto mb-3" placeholder="Your name" required />
-                        <button type="submit" class="btn btn-danger btn-lg">🚂 Start with The Trolley Problem</button>
+                        <button type="submit" class="btn btn-start btn-lg"> Start with The Trolley Problem</button>
                     </form>
                 </div>
             </div>
@@ -50,19 +51,19 @@
 <div class="row mt-5">
     <div class="col-md-4">
         <div class="text-center">
-            <h4>🤔 Think Deeply</h4>
+            <h4> Think Deeply</h4>
             <p>Explore classic thought experiments that challenge your moral intuitions.</p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="text-center">
-            <h4>📊 Compare Responses</h4>
+            <h4> Compare Responses</h4>
             <p>See how your choices align with others facing the same moral crossroads.</p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="text-center">
-            <h4>🧠 Learn Ethics</h4>
+            <h4> Learn Ethics</h4>
             <p>Discover the philosophical frameworks behind moral decision-making.</p>
         </div>
     </div>

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/TheEthicsArena.Web.o0dcoj0u9m.bundle.scp.css"
     },
     {
+      "Id": "/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/wwwroot/css/glass-theme.css",
+      "PackagePath": "staticwebassets/css/glass-theme.css"
+    },
+    {
       "Id": "/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

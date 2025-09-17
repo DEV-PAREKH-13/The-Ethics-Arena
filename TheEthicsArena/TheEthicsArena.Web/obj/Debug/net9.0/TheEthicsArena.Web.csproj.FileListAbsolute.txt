@@ -17,7 +17,6 @@
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/scopedcss/bundle/TheEthicsArena.Web.styles.css
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/scopedcss/projectbundle/TheEthicsArena.Web.bundle.scp.css
-/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/compressed/m4u34mewgp-lugek5hnai.gz
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/compressed/caj5xpkcmd-61n19gt1b8.gz
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/compressed/2uo33xlku3-fr7q2aak1r.gz
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/compressed/5ozzokxo00-bqjiyaj88i.gz
@@ -104,3 +103,5 @@
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/bin/Debug/net9.0/Snappier.dll
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/bin/Debug/net9.0/ZstdSharp.dll
 /Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/TheEthic.B927A088.Up2Date
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/compressed/m4u34mewgp-hzglf4kd4y.gz
+/Users/devparekh/Philosophy/The-Ethics-Arena/TheEthicsArena/TheEthicsArena.Web/obj/Debug/net9.0/compressed/kdjs6vfi9f-ng3souueyn.gz
